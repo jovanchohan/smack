@@ -220,8 +220,8 @@ public class XMPPConnection extends Connection {
             throw new IllegalStateException("Already logged in to server.");
         }
         // Do partial version of nameprep on the username.
-        username = username.toLowerCase().trim();
-
+        //username = username.toLowerCase().trim();
+        //COMMENTED OUT FOR APPSCALE
         String response;
         if (config.isSASLAuthenticationEnabled() &&
                 saslAuthentication.hasNonAnonymousAuthentication()) {
